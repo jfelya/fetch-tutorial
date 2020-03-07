@@ -1,0 +1,46 @@
+Se ejecutarán promesas con un tiempo de retorno diferente y se imprimirán en pantalla de acuerdo al orden en el que fueron resueltas
+
+
+Declarar un objeto con los datos del botón con ID "promisesBtn"
+Declarar un objeto con los datos del párrafo con ID "text"
+
+Declarar función promisesTest {
+
+    Declarar promesa con nombre "promesa" de parámetro una función con parámetros (resolve, reject) y ejecute {
+
+        Limpiar "text"
+        Escribir algo en "text"
+
+        Llamar función setTimeout de primer parámetro una función que ejecutará {
+
+            Darle valor a "resolve"
+
+        }
+        y de segundo parámetro un tiempo
+
+        Llamar función setTimeout de nuevo de segundo parámetro una función que ejecutará {
+
+            Darle valor a "reject"
+
+        }
+        y de segundo parámetro un tiempo
+    }
+
+    "promesa"
+
+        En caso de estar resuelta llamar una función con parámetro "response" y que ejecute {
+
+            Limpiar "text"
+            Alerta "response"
+
+        }
+
+        En caso de estar rechazada llamar una función con parámetro "error" y que ejecute {
+
+            Limpiar "text"
+            Alerta "error"
+
+        }
+}
+
+Agregar evento "click" a "promisesBtn" con la función "promisesTest" 

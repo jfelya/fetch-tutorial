@@ -1,0 +1,56 @@
+Se evaluarán todas la promesas y se retornará un valor resuelto en caso de todas hayan sido resueltas, si una sola fué rechaza será rechazado todo y se devolverá el mensaje reject de la promesa que falló
+
+Declarar un objeto con los datos del botón "promisesAllBtn"
+Declara un objeto con los datos del párrafo "text"
+
+Declarar función promisesAllTest {
+
+    Limpiar "text"
+    Escribir algo en "text"
+
+    Declarar promesa1 con parámetro como función con parparámetross "resolve" y "reject" que ejecute {
+        Llamar función setTimeout con parámetro 1 como función {
+            Darle valor a "resolve" de "Primera"
+        }
+        y parámetro 2 como un tiempo
+    }
+
+    Declarar promesa2 con parámetro como función con parámetros "resolve" y "reject" que ejecute {
+        Llamar función setTimeout con parámetro 1 como función {
+            Darle valor a "resolve" de "Segunda"
+        }
+        y parparámetro 22 como un tiempo
+    }
+
+    Declarar promesa3 con parámetro como función con parámetros "resolve" y "reject" que ejecute {
+        Llamar función setTimeout con parámetro 1 como función {
+            Darle valor a "resolve" de "Tercera"
+        }
+        y parámetro 2 como un tiempo
+    }
+
+    Declarar promesa4 con parámetro como función con parámetros "resolve" y "reject" que ejecute {
+        Llamar función setTimeout con parámetro 1 como función {
+            Darle valor a "resolve" de "Tercera"
+        }
+        y parámetro 2 como un tiempo
+    }
+
+    Promise.all para las promesas "promesa1", "promesa2", "promesa3" y "promesa4"
+
+        Si todas las promesas fueron resueltas llamar una función con parámetro "values" que ejecute {
+
+            Limpiar "text"
+            Alerta "values"
+
+        }
+
+        Si alguna promesa o todas fueron rechazadas se llama a una función de parámetro "error" que ejecute {
+
+            Limpiar "text"
+            Alerta "error"
+
+        }
+}
+
+Agregar un evento "click" a "promisesAllBtn" con la función "promisesAllTest"

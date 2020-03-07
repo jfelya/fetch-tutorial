@@ -1,0 +1,35 @@
+Esta función imprimirá detalles en pantalla uno después del otro, y mostrará mensajes emergentes que desencadenan otros mensajes emergentes
+
+Declarar función callBackTest {
+
+	texto = elemento del DOM con ID "texto"
+	Vaciar "texto"
+
+	Declarar función first {
+		Llamar función setTimeout( Parámetro 1 con función para modificar "texto" , Parámetro 2 con tiempo de espera )
+	}
+
+	declarar función second {
+		modificar "texto"
+	}
+
+	Llamar función "first"
+	Llamar función "second"
+
+	Declarar función doHomework( Parámetro 1 , Parámetro 2 ) {
+
+		Alerta "Comenzando la tarea de ${Parámetro 1}"
+		Llamar función Parámetro 2;
+
+	}
+
+    Declarar función alertFinished {
+
+        Alerta "Tarea finalizada"
+        
+    }
+
+    Llamar función doHomework ( Matemática, alertFinished )
+}
+
+Seleccionar elemento del DOM con ID "callbackBtn" y agregarle un evento "click" que llamará a la función "callBackTest"

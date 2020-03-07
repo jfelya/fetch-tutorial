@@ -1,0 +1,19 @@
+body {
+    font-size: 24px;
+    margin: 30px;
+    font-family: Century Gothic;
+    text-align: center;
+    background-color: #2A2A2A;
+    color: #CCCCCC;
+}
+
+h1 {
+    color: #FFBBAA;
+    transition: all 0.5s ease;
+}
+
+h1:hover {
+    font-size: 72px;
+    color: #AABBFF;
+    cursor: help;
+}

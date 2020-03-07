@@ -1,0 +1,61 @@
+Se ejecutará el Promise.race que devolverá la primera promesa en ser resuelta o rechazada y mostrará el resultado de acuerdo al estado de la promesa regresada
+
+
+Declarar objeto con datos del botón "promisesRaceBtn"
+Declarar objeto con datos del párrafo "text"
+
+Declarar función promisesRaceTest {
+
+    Limpiar "text"
+    Escribir algo en "text"
+
+    Declarar promesa2 con parámetro como una función de parámetros "resolve" y "reject" y que ejecute {
+
+        Llamar funcion setTimeout con parámetro 1 como función que ejecute {
+
+            Darle valor a "resolve" de "Segunda"
+
+        }
+        y segundo parámetro como un tiempo
+    }
+
+    Declarar promesa3 con parámetro como una función de parámetros "resolve" y "reject" y que ejecute {
+
+        Llamar funcion setTimeout con parámetro 1 como función que ejecute {
+
+            Darle valor a "resolve" de "Tercera"
+
+        }
+        y segundo parámetro como un tiempo
+    }
+
+    Declarar promesa4 con parámetro como una función de parámetros "resolve" y "reject" y que ejecute {
+
+        Llamar funcion setTimeout con parámetro 1 como función que ejecute {
+
+            Darle valor a "resolve" de "Cuarta"
+
+        }
+        y segundo parámetro como un tiempo
+    }
+
+    Promise.race de "promesa2", "promesa3" y "promesa4"
+
+        En caso de la que regresó primero haya sido resuelta {
+
+            Limpiar "text"
+            // El values será el "resolve" de la promesa que regresó primero
+            Alerta "values"
+
+        }
+
+        En caso de que la primera en volver haya sido rechazada {
+
+            Limpiar "text"
+            // Se devolverá el "reject" de la promesa que regresó primero
+            Alerta "error"
+
+        }
+}
+
+Agregar evento "click" a "promisesRaceBtn" y agregarle la función "promisesRaceTest"

@@ -1,0 +1,73 @@
+Se ejecutarán las promesas en cadena una después de otra, si la primera es rechazada los siguientes no se ejecutarán
+
+
+Declarar objeto con datos del botón "promisesChainBtn"
+Declarar objeto con datos del párrafo "text"
+
+Declarar función promisesChainTest {
+
+    Limpiar "text"
+    Escribir algo en "text"
+
+    Declarar promesa2 con parámetro como una función de parámetros "resolve" y "reject" y que ejecute {
+
+        Llamar funcion setTimeout con parámetro 1 como función que ejecute {
+
+            Darle valor a "resolve" de "Segunda"
+
+        }
+        y segundo parámetro como un tiempo
+    }
+
+    Declarar promesa3 con parámetro como una función de parámetros "resolve" y "reject" y que ejecute {
+
+        Llamar funcion setTimeout con parámetro 1 como función que ejecute {
+
+            Darle valor a "resolve" de "Tercera"
+
+        }
+        y segundo parámetro como un tiempo
+    }
+
+    Declarar promesa4 con parámetro como una función de parámetros "resolve" y "reject" y que ejecute {
+
+        Llamar funcion setTimeout con parámetro 1 como función que ejecute {
+
+            Darle valor a "resolve" de "Cuarta"
+
+        }
+        y segundo parámetro como un tiempo
+    }
+
+    // Se comienza por una promesa en específico
+
+    promesa3
+
+        Si la promesa "promesa3" fué resuelta llamar a una función con parámetro "response" y que ejecute {
+
+            Alerta "response"
+            Regresar "promesa2"
+
+        }
+
+        Si la promesa "promesa2" fué resuelta llamar a una función con parámetro "ValorSegundaPromesa" y que ejecute {
+
+            Alerta "ValorSegundaPromesa"
+            Regresar "promesa4"
+
+        }
+
+        Si la promesa "promesa4" fué resuelta llamar a una función con parámetro "ValorCuartaPromesa" y que ejecute {
+
+            Alerta "ValorCuartaPromesa"
+
+        }
+
+        Si hubo una promesa rechazada ejecutar una función con parámetro "error" y que ejecute {
+            Alerta "error"
+            Lanzar error;
+        }
+
+}
+
+Agregar evento "click" a "promisesChainBtn" y agregarle la función "promisesChainTest"
